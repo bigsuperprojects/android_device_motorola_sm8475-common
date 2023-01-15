@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+DEVICE_PREBUILT_PATH := device/motorola/hiphi-prebuilt
+
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -191,6 +193,10 @@ PRODUCT_PACKAGES += \
 # IPC router config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
+
+# Kernel
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PREBUILT_PATH)/dtb.img:dtb.img
 
 # Lineage Health
 PRODUCT_PACKAGES += \

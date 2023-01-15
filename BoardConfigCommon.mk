@@ -17,6 +17,7 @@
 BOARD_VENDOR := motorola
 
 COMMON_PATH := device/motorola/sm8475-common
+DEVICE_PREBUILT_PATH := device/motorola/hiphi-prebuilt
 
 # Architecture
 TARGET_ARCH := arm64
@@ -52,79 +53,30 @@ BOARD_BOOTCONFIG += androidboot.memcg=1
 BOARD_BOOTCONFIG += androidboot.usbcontroller=a600000.dwc3
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
+BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_KERNEL_SOURCE := kernel/motorola/sm8475
-TARGET_KERNEL_CONFIG := \
-    gki_defconfig \
-    vendor/waipio_GKI.config \
-    vendor/ext_config/moto-waipio.config
+TARGET_KERNEL_CONFIG := gki_defconfig
 
-TARGET_KERNEL_EXT_MODULE_ROOT := kernel/motorola/sm8475-modules
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_PREBUILT_KERNEL := $(DEVICE_PREBUILT_PATH)/Image
+TARGET_PREBUILT_DTB := $(DEVICE_PREBUILT_PATH)/dtb.img
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PREBUILT_PATH)/dtbo.img
 
 # Kernel Modules
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
-BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(COMMON_PATH)/modules.blocklist
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load.vendor_boot))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(COMMON_PATH)/modules.blocklist.vendor_boot
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load.recovery))
-BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
+KERNEL_MODULE_PATH := $(DEVICE_PREBUILT_PATH)/modules
+KERNEL_MODULES := $(wildcard $(KERNEL_MODULE_PATH)/*.ko)
 
-TARGET_KERNEL_EXT_MODULES := \
-    qcom/opensource/mmrm-driver \
-    qcom/opensource/audio-kernel \
-    qcom/opensource/camera-kernel \
-    qcom/opensource/cvp-kernel \
-    qcom/opensource/dataipa/drivers/platform/msm \
-    qcom/opensource/datarmnet/core \
-    qcom/opensource/datarmnet-ext/aps \
-    qcom/opensource/datarmnet-ext/offload \
-    qcom/opensource/datarmnet-ext/shs \
-    qcom/opensource/datarmnet-ext/perf \
-    qcom/opensource/datarmnet-ext/perf_tether \
-    qcom/opensource/datarmnet-ext/sch \
-    qcom/opensource/datarmnet-ext/wlan \
-    qcom/opensource/display-drivers/msm \
-    qcom/opensource/eva-kernel \
-    qcom/opensource/video-driver \
-    qcom/opensource/wlan/qcacld-3.0/.qca6490
+BOARD_VENDOR_KERNEL_MODULES := $(KERNEL_MODULES)
 
-TARGET_KERNEL_EXT_MODULES += \
-    motorola/drivers/mmi_annotate \
-    motorola/drivers/mmi_info \
-    motorola/drivers/power/bm_adsp_ulog \
-    motorola/drivers/power/mmi_charger \
-    motorola/drivers/power/qti_glink_charger \
-    motorola/drivers/power/qpnp_adaptive_charge \
-    motorola/drivers/power/cw2217b_fg_mmi \
-    motorola/drivers/power/sgm4154x_charger_lite \
-    motorola/drivers/misc/utag \
-    motorola/drivers/mmi_relay \
-    motorola/drivers/moto_f_mass_storage \
-    motorola/drivers/moto_f_usbnet \
-    motorola/drivers/misc/mmi_sys_temp \
-    motorola/drivers/power/smart_pen_charger \
-    motorola/drivers/watchdogtest \
-    motorola/drivers/regulator/wl2864c \
-    motorola/drivers/regulator/wl2868c \
-    motorola/drivers/regulator/slg5bm43670 \
-    motorola/drivers/sensors \
-    motorola/drivers/misc/hall \
-    motorola/drivers/misc/sx937x \
-    motorola/drivers/misc/sx937x_multi \
-    motorola/drivers/input/touchscreen/touchscreen_mmi \
-    motorola/drivers/input/touchscreen/goodix_berlin_mmi \
-    motorola/drivers/input/touchscreen/stmicro_mmi \
-    motorola/drivers/input/touchscreen/focaltech_touch_v3 \
-    motorola/drivers/input/misc/fpc_fps_mmi \
-    motorola/drivers/input/misc/goodix_fod_mmi \
-    motorola/drivers/input/misc/rbs_fod_mmi \
-    motorola/drivers/moto_mm \
-    motorola/drivers/moto_swap \
-    motorola/drivers/nfc/st21nfc \
-    motorola/drivers/nfc/sn2xx \
-    motorola/drivers/ese/st54x
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(KERNEL_MODULE_PATH)/modules.blocklist
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_MODULE_PATH)/modules.load.vendor_dlkm))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_MODULE_PATH)/modules.load.vendor_boot))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD :=  $(strip $(shell cat $(KERNEL_MODULE_PATH)/modules.load.recovery))
+
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(addprefix $(KERNEL_MODULE_PATH)/, $(strip $(shell cat $(KERNEL_MODULE_PATH)/modules.load.vendor_ramdisk))))
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
