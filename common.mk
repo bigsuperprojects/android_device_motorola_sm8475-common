@@ -140,6 +140,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.recovery.rc \
     init.target.rc \
+    loggy.rc \
     ueventd.qcom.rc \
     init.class_main.sh \
     init.mmi.boot.sh \
