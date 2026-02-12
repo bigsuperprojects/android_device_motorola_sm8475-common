@@ -376,6 +376,13 @@ service fpc_ident /vendor/bin/fpc_ident
     oneshot
     disabled
 
+service gf_ident /vendor/bin/hw/goodix_ident
+    class late_start
+    user system
+    group system input uhid
+    oneshot
+    disabled
+
 service vendor.touch-dead-sh /vendor/bin/init.oem.hw.sh -f
     class main
     user root
