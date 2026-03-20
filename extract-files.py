@@ -84,9 +84,6 @@ blob_fixups: blob_fixups_user_type = {
         'libgrpc++_unsecure.so', 'libgrpc++_unsecure_prebuilt.so'
     ),
     'vendor/lib64/libmotext_inf.so': blob_fixup().remove_needed('libril.so'),
-    'system_ext/priv-app/ims/ims.apk': blob_fixup().apktool_patch(
-        'ims-patches'
-    ),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup().add_needed(
         'libhidlbase_shim.so'
     ),
