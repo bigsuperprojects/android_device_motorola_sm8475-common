@@ -1,5 +1,5 @@
 #
-# SPDX-FileCopyrightText: 2024 The LineageOS Project
+# SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -17,7 +17,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/motorola/sm7435-common',
+    'device/motorola/sm8475-common',
     'hardware/motorola',
     'hardware/qcom-caf/sm8450',
     'hardware/qcom-caf/wlan',
@@ -84,9 +84,6 @@ blob_fixups: blob_fixups_user_type = {
         'sensors.moto_ext.so',
     ),
     'vendor/lib64/libmotext_inf.so': blob_fixup().remove_needed('libril.so'),
-    'system_ext/priv-app/ims/ims.apk': blob_fixup().apktool_patch(
-        'ims-patches'
-    ),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup().add_needed(
         'libhidlbase_shim.so'
     ),
@@ -95,9 +92,9 @@ blob_fixups: blob_fixups_user_type = {
     ),
     'vendor/lib64/sensors.moto.so': blob_fixup().add_needed('libbase_shim.so'),
     (
-        'vendor/etc/media_codecs_parrot_v0.xml',
-        'vendor/etc/media_codecs_parrot_v1.xml',
-        'vendor/etc/media_codecs_parrot_v2.xml',
+        'vendor/etc/media_codecs_waipio_v0.xml',
+        'vendor/etc/media_codecs_waipio_v1.xml',
+        'vendor/etc/media_codecs_waipio_v2.xml',
         'vendor/etc/media_codecs_ravelin.xml',
     ): blob_fixup().regex_replace(
         '.*media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio|dolby_audio).*\n',
@@ -112,7 +109,7 @@ blob_fixups: blob_fixups_user_type = {
 }
 
 module = ExtractUtilsModule(
-    'sm7435-common',
+    'sm8475-common',
     'motorola',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,

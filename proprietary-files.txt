@@ -1,4 +1,6 @@
-# All unpinned blobs below are extracted from 15 V1UQS35H.103-16-9 5d30fe-55e2ef release-keys.
+## All proprietary files from this list, unless pinned and noted otherwise,
+## are from edge 30 pro (14 U1SHS34.1-177-8-3 0be4e-aae78).
+## variant: RETAIL
 
 # ADSP
 vendor/bin/adsprpcd
@@ -10,45 +12,62 @@ vendor/lib64/libadspd.so
 vendor/lib64/libloadalgo_stub.so
 
 # ADSP modules
-vendor/lib/rfsa/adsp/bm2n31.bin
-vendor/lib/rfsa/adsp/bm2n32.bin
-vendor/lib/rfsa/adsp/bm2n33.bin
-vendor/lib/rfsa/adsp/bm2n34.bin
-vendor/lib/rfsa/adsp/bm2n35.bin
-vendor/lib/rfsa/adsp/bm2n36.bin
-vendor/lib/rfsa/adsp/bm2n37.bin
-vendor/lib/rfsa/adsp/bm2n54.bin
-vendor/lib/rfsa/adsp/bm2n55.bin
-vendor/lib/rfsa/adsp/bm2n56.bin
-vendor/lib/rfsa/adsp/libQnnHtpV73.so
-vendor/lib/rfsa/adsp/libQnnHtpV73Skel.so
-vendor/lib/rfsa/adsp/libSnpeDspV65Skel.so
-vendor/lib/rfsa/adsp/libSnpeDspV66Skel.so
+vendor/lib/rfsa/adsp/bm2n00.bin
+vendor/lib/rfsa/adsp/bm2n01.bin
+vendor/lib/rfsa/adsp/bm2n02.bin
+vendor/lib/rfsa/adsp/bm2n03.bin
+vendor/lib/rfsa/adsp/bm2n04.bin
+vendor/lib/rfsa/adsp/bm2n05.bin
+vendor/lib/rfsa/adsp/bm2n06.bin
+vendor/lib/rfsa/adsp/bm2n07.bin
+vendor/lib/rfsa/adsp/bm2n08.bin
+vendor/lib/rfsa/adsp/bm2n09.bin
+vendor/lib/rfsa/adsp/bm2n10.bin
+vendor/lib/rfsa/adsp/bm2n11.bin
+vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
+vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
+vendor/lib/rfsa/adsp/libDspIOProxy_skel.so
+vendor/lib/rfsa/adsp/libQ6MSFR_manager_skel.so
+vendor/lib/rfsa/adsp/libQnnHtpAltPrepV69Skel.so
+vendor/lib/rfsa/adsp/libQnnHtpV69Skel.so
 vendor/lib/rfsa/adsp/libSnpeHtpV68Skel.so
 vendor/lib/rfsa/adsp/libSnpeHtpV69Skel.so
-vendor/lib/rfsa/adsp/libSnpeHtpV73Skel.so
 vendor/lib/rfsa/adsp/libSuperSensor_skel.so
+vendor/lib/rfsa/adsp/libVppFrcQnnHtp.so
+vendor/lib/rfsa/adsp/libVppQnnHtp.so
 vendor/lib/rfsa/adsp/libadsp_jpege_skel.so
 vendor/lib/rfsa/adsp/libapn_dsp_skel.so
-vendor/lib/rfsa/adsp/libarc_htp_driver_skel.so
 vendor/lib/rfsa/adsp/libbitml_nsp_skel.so
 vendor/lib/rfsa/adsp/libbitml_nsp_v2_skel.so
 vendor/lib/rfsa/adsp/libcalculator_skel.so
 vendor/lib/rfsa/adsp/libcamera_nn_skel.so
+vendor/lib/rfsa/adsp/libcvpdsp_2_1.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
+vendor/lib/rfsa/adsp/libdsp_streamer_qvrcam_receiver.so
+vendor/lib/rfsa/adsp/libevadsp_3_0.so
+vendor/lib/rfsa/adsp/libeye_tracking_dsp_sample_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
-vendor/lib/rfsa/adsp/libhdr_skel.so
-vendor/lib/rfsa/adsp/libhme_dsp_skel.so
+vendor/lib/rfsa/adsp/libhalide_hexagon_remote_skel.so
 vendor/lib/rfsa/adsp/libmctfengine_skel.so
+vendor/lib/rfsa/adsp/libmobilenet_dsp_frc.so
+vendor/lib/rfsa/adsp/libmobilenet_dsp_frc_networks.so
+vendor/lib/rfsa/adsp/libqvr_3dof_tracker_skel.so
+vendor/lib/rfsa/adsp/libqvr_cam_dsp_driver_skel.so
+vendor/lib/rfsa/adsp/libqvr_dsp_driver_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
-vendor/lib/rfsa/adsp/libsw2dlut_dsp_skel.so
+vendor/lib/rfsa/adsp/libsnpe_dsp_v65_domains_v2_skel.so
+vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so
+vendor/lib/rfsa/adsp/libtracker_6dof_skel_8250.so
+vendor/lib/rfsa/adsp/libtracker_6dof_skel_8350.so
+vendor/lib/rfsa/adsp/libvpp_ais_networks.so
+vendor/lib/rfsa/adsp/libvpp_vqa_networks.so
+vendor/lib/rfsa/adsp/libvpt_action_recognition.so
 vendor/lib/rfsa/adsp/libworker_pool.so
 
 # Audio libraries
 vendor/lib64/libadm.so
-vendor/lib64/libaualgo_foundation.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libmcs.so
@@ -190,7 +209,6 @@ vendor/lib64/libcv_common.so
 vendor/lib64/libcvp2_1.so
 
 # Diag
-system/lib64/vendor.qti.diaghal-V1-ndk.so:system_ext/lib64/vendor.qti.diaghal-V1-ndk.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
 vendor/etc/init/vendor.qti.diag.rc
@@ -199,8 +217,8 @@ vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=_vendor
 
 # Display - HDR
 vendor/lib64/libhdr_backlight_adapter.so
-vendor/lib64/libhdr_stub.so
 vendor/lib64/libhdr_tm.so
+vendor/lib64/libhdrdynamic.so
 
 # Display - HWC
 vendor/bin/qdcmss
@@ -325,13 +343,9 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
 vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
 vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
-vendor/lib64/libesepmconfig.so
+vendor/lib64/libesesbprovision.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
-
-# Euicc
-product/etc/permissions/privapp-permissions-com.google.android.euicc.xml
-product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
 
 # FM
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
@@ -407,12 +421,6 @@ vendor/lib64/libllvm-qcom.so
 vendor/lib64/libllvm-qgl.so
 
 # Graphics - Adreno firmware
-vendor/firmware/gen6_3_26_0_zap.b00
-vendor/firmware/gen6_3_26_0_zap.b01
-vendor/firmware/gen6_3_26_0_zap.b02
-vendor/firmware/gen6_3_26_0_zap.elf
-vendor/firmware/gen6_3_26_0_zap.mbn
-vendor/firmware/gen6_3_26_0_zap.mdt
 vendor/firmware/gmu_gen70000.bin
 vendor/gpu/kbc/sequence_manifest.bin
 vendor/gpu/kbc/unified_kbcs_64.bin
@@ -426,8 +434,9 @@ vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
 # Kernel
-vendor/bin/init.kernel.post_boot-parrot.sh
-vendor/bin/init.kernel.post_boot-ravelin.sh
+vendor/bin/init.kernel.post_boot-cape.sh
+vendor/bin/init.kernel.post_boot-diwali.sh
+vendor/bin/init.kernel.post_boot-taro.sh
 vendor/bin/init.kernel.post_boot.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/vendor_modprobe.sh
@@ -464,29 +473,31 @@ vendor/bin/init.qti.media.sh
 vendor/etc/init/init.qti.media.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc
-vendor/etc/media_parrot_v0/video_system_specs.json
-vendor/etc/media_parrot_v0/video_system_specs.json
-vendor/etc/media_parrot_v1/video_system_specs.json
-vendor/etc/media_parrot_v1/video_system_specs.json
-vendor/etc/media_parrot_v2/video_system_specs.json
-vendor/etc/media_parrot_v2/video_system_specs.json
-vendor/etc/media_ravelin/video_system_specs.json
+vendor/etc/vintf/manifest/vendor.qti.hardware.qconfig@1.0-service.xml
+vendor/etc/media_cape/video_system_specs.json
+vendor/etc/media_diwali_v0/video_system_specs.json
+vendor/etc/media_diwali_v1/video_system_specs.json
+vendor/etc/media_diwali_v2/video_system_specs.json
+vendor/etc/media_taro/video_system_specs.json
 vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
-vendor/etc/media_codecs_parrot_v0.xml
-vendor/etc/media_codecs_parrot_v1.xml
-vendor/etc/media_codecs_parrot_v2.xml
-vendor/etc/media_codecs_performance_parrot_v0.xml
-vendor/etc/media_codecs_performance_parrot_v1.xml
-vendor/etc/media_codecs_performance_parrot_v2.xml
-vendor/etc/media_codecs_performance_ravelin.xml
-vendor/etc/media_codecs_ravelin.xml
+vendor/etc/media_codecs_cape.xml
+vendor/etc/media_codecs_diwali_v0.xml
+vendor/etc/media_codecs_diwali_v1.xml
+vendor/etc/media_codecs_diwali_v2.xml
+vendor/etc/media_codecs_performance_cape.xml
+vendor/etc/media_codecs_performance_diwali_v0.xml
+vendor/etc/media_codecs_performance_diwali_v1.xml
+vendor/etc/media_codecs_performance_diwali_v2.xml
+vendor/etc/media_codecs_performance_taro.xml
+vendor/etc/media_codecs_taro.xml
 vendor/etc/media_profiles_V1_0.xml
-vendor/etc/media_profiles_parrot_v0.xml
-vendor/etc/media_profiles_parrot_v1.xml
-vendor/etc/media_profiles_parrot_v2.xml
-vendor/etc/media_profiles_ravelin.xml
+vendor/etc/media_profiles_cape.xml
+vendor/etc/media_profiles_diwali_v0.xml
+vendor/etc/media_profiles_diwali_v1.xml
+vendor/etc/media_profiles_diwali_v2.xml
+vendor/etc/media_profiles_taro.xml
 vendor/lib64/libEvrcSwCodec.so
 vendor/lib64/libQcelp13SwCodec.so
 vendor/lib64/libdsd2pcm.so
@@ -501,6 +512,7 @@ vendor/lib64/libqc2audio_swaudiocodec.so
 vendor/lib64/libqc2audio_utils.so
 vendor/lib64/libqc2colorconvertfilter.so
 vendor/lib64/libqc2filter.so
+vendor/lib64/libqc2vppfilter.so
 vendor/lib64/libqcodec2_base.so
 vendor/lib64/libqcodec2_basecodec.so
 vendor/lib64/libqcodec2_core.so
@@ -514,10 +526,13 @@ vendor/lib64/libqcodec2_v4l2codec.so
 vendor/lib64/libvideotxr.so
 vendor/lib64/libvideoutils.so
 vendor/lib64/qti.video.utils.videobufferlayout.so
+vendor/lib64/vendor.qti.hardware.qconfig@1.0.so
 
 # Neural networks
 vendor/lib64/libQnnHtp.so
-vendor/lib64/libQnnHtpV73Stub.so
+vendor/lib64/libQnnHtpAltPrepV69Stub.so
+vendor/lib64/libQnnHtpPrepare.so
+vendor/lib64/libQnnHtpV69Stub.so
 
 # OEM
 vendor/bin/motobox;SYMLINK=vendor/bin/expat
@@ -635,13 +650,13 @@ product/framework/uimgbamanagerlibrary.jar
 product/framework/uimservicelibrary.jar
 
 # RIL - system_ext
+system_ext/app/QtiTelephony/QtiTelephony.apk
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/framework/qcrilhook.jar
-system_ext/priv-app/QtiTelephony/QtiTelephony.apk
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
 # RIL
@@ -721,17 +736,7 @@ vendor/etc/qcril_database/upgrade/ecc/43_version_qcrildb.sql;FILEGROUP=proprieta
 vendor/etc/qcril_database/upgrade/ecc/44_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
 vendor/etc/qcril_database/upgrade/ecc/45_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
 vendor/etc/qcril_database/upgrade/ecc/46_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/47_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/48_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/49_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
 vendor/etc/qcril_database/upgrade/ecc/4_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/50_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/51_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/52_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/53_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/54_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/55_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
-vendor/etc/qcril_database/upgrade/ecc/56_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
 vendor/etc/qcril_database/upgrade/ecc/5_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
 vendor/etc/qcril_database/upgrade/ecc/6_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
 vendor/etc/qcril_database/upgrade/ecc/7_version_qcrildb.sql;FILEGROUP=proprietary_rildb_ecc_sql_files
@@ -866,7 +871,9 @@ system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/li
 system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
-system_ext/priv-app/ims/ims.apk
+
+# RIL - IMS - system_ext - from hiphi
+system_ext/priv-app/ims/ims.apk|d3e622ac57410cfe586ab81e7890fd7cde43ccfc
 
 # RIL - IMS
 vendor/bin/ims_rtp_daemon
@@ -1006,20 +1013,10 @@ vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
 
 # Venus firmware
 vendor/firmware/venus_4mb.mbn
-vendor/firmware/venus_4mb_ecdsa.mbn
 vendor/firmware/venus_4mb_unsigned.mbn
 vendor/firmware/venus_4mb_v6.mbn
-vendor/firmware/venus_4mb_v6_rsa.mbn
 vendor/firmware/venus_4mb_v7.mbn
-vendor/firmware/venus_5mb.mbn
-vendor/firmware/venus_5mb_ecdsa.mbn
-vendor/firmware/venus_5mb_unsigned.mbn
-vendor/firmware/venus_5mb_v6.mbn
-vendor/firmware/venus_5mb_v6_rsa.mbn
-vendor/firmware/venus_5mb_v7.mbn
-vendor/firmware/venus_ecdsa.mbn
 vendor/firmware/venus_v6.mbn
-vendor/firmware/venus_v6_rsa.mbn
 vendor/firmware/venus_v7.mbn
 
 # VPP
