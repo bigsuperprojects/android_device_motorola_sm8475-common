@@ -306,6 +306,7 @@ mmi_relay.ko
 sensors_class.ko
 touchscreen_mmi.ko
 goodix_brl_mmi.ko
+stmicro_mmi.ko
 gpio_keys.ko
 mmi_charger.ko
 mmi_sys_temp.ko
